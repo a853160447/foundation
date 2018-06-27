@@ -16,6 +16,11 @@ func (s *XMLSerializer) Unmarshal(data []byte, v interface{}) error {
 	return xml.Unmarshal(data, v)
 }
 
+// Mime -
+func (s *XMLSerializer) Mime() string {
+	return "application/xml;charset=utf-8"
+}
+
 // GetXML - 基础的网络访问
 func GetXML(url string, values URLEncoder, i interface{}) error {
 	return GetWithSerializer(url, values, i, &XMLSerializer{})
