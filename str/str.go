@@ -7,6 +7,19 @@ import (
 	"strconv"
 )
 
+//Int2str -
+func Int2str(num int) string {
+	return strconv.Itoa(num)
+}
+
+//CaseString -
+func CaseString(condition bool, trueVal string, defaultVal string) string {
+	if condition {
+		return trueVal
+	}
+	return defaultVal
+}
+
 //Int642str -
 func Int642str(num int64) string {
 	return strconv.FormatInt(num, 10)
